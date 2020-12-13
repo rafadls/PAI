@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<sdf version='1.6'>
+  <world name='default'>
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <!-- Own physics settings to speed up simulation -->
+    <physics type='ode'>
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>100</real_time_update_rate>
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+    <!--light name='user_directional_light_0' type='directional'>
+      <pose>0 0 1 0 0 0</pose>
+    </light-->
+    <model name='camara'>
+      <static>true</static>
+      <pose>-1 0 2 0 1 0</pose>
+        <sensor name='camera_1' type='camera'>
+          <camera>
+            <!--save enabled="true">
+              <path>/tmp/camera_save_tutorial</path>
+            </save-->
+            <horizontal_fov>1.047</horizontal_fov>
+            <image>
+              <width>1920</width>
+              <height>1080</height>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>100</far>
+            </clip>
+          </camera>
+          <always_on>1</always_on>
+          <update_rate>45</update_rate>
+        </sensor>
+    </model>
+  </world>
+</sdf>

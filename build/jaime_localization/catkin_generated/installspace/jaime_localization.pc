@@ -1,0 +1,8 @@
+prefix=/home/rafael/PAI/install
+
+Name: jaime_localization
+Description: Description of jaime_localization
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
