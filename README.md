@@ -1,11 +1,17 @@
+## setup
+
 source devel/setup.bash
 
-roslaunch kobuki_gazebo kobuki_empty_world.launch 
+
+## Correr robocup: 
+
+roslaunch kobuki_gazebo robocup.launch
+
+## Controlar el robot 
 
 roslaunch kobuki_keyop safe_keyop.launch 
 
+## Abrir rviz
+
 rviz
-----------------------
-no funciona:
-roslaunch kobuki_gazebo robocup.launch
 
