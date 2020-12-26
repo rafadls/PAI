@@ -239,7 +239,7 @@
 		<!-- camera -->
 	  <gazebo reference="camara_rgb">
 		<sensor type="camera" name="camera1">
-			<update_rate>30.0</update_rate>
+			<update_rate>1.0</update_rate>
 			<camera name="head">
 			<save enabled="true">
 				<path>/home/rafael/PAI/images</path>
@@ -265,8 +265,8 @@
 			</camera>
 			<plugin name="camera_controller" filename="libgazebo_ros_camera.so">
 			<alwaysOn>true</alwaysOn>
-			<updateRate>0.0</updateRate>
-			<cameraName>rrbot/camera1</cameraName>
+			<!--updateRate>0.0</updateRate-->
+			<cameraName>/rrbot/camera1/</cameraName>
 			<imageTopicName>image_raw</imageTopicName>
 			<cameraInfoTopicName>camera_info</cameraInfoTopicName>
 			<frameName>camera_link</frameName>
