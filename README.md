@@ -7,6 +7,10 @@ source devel/setup.bash
 
 roslaunch kobuki_gazebo robocup.launch
 
+
+roslaunch kobuki_gazebo robocup_real.launch
+
+
 ## Controlar el robot 
 
 roslaunch kobuki_keyop safe_keyop.launch 
