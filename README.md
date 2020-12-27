@@ -13,7 +13,10 @@ roslaunch kobuki_gazebo robocup.launch
 ```bash
 roslaunch kobuki_gazebo robocup_real.launch
 ```
-
+### Arena 1
+```bash
+roslaunch kobuki_gazebo arena_1.launch
+```
 
 ## Controlar el robot 
 ```bash
