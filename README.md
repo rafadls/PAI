@@ -17,6 +17,11 @@ roslaunch kobuki_gazebo robocup_real.launch
 ```bash
 roslaunch kobuki_gazebo arena_1.launch
 ```
+### Arena 2
+```bash
+roslaunch kobuki_gazebo arena_2.launch
+```
+
 
 ## Controlar el robot 
 ```bash
@@ -27,3 +32,4 @@ roslaunch kobuki_keyop safe_keyop.launch
 ```bash
 rviz
 ```
+

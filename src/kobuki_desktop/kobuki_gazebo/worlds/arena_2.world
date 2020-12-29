@@ -84,6 +84,19 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
+    <light name='user_directional_light_0' type='directional'>
+      <pose frame=''>3.89202 -0.530418 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>0.1 0.1 -0.9</direction>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>1</cast_shadows>
+    </light>
     <model name='robocup19_home_arena'>
       <static>1</static>
       <link name='link'>
@@ -91,7 +104,7 @@
           <geometry>
             <mesh>
               <scale>0.01 0.01 0.01</scale>
-              <uri>model://arena_ejemplo_1/meshes/example_1.obj</uri>
+              <uri>model://arena_ejemplo_2/meshes/arena_ejemplo_2.obj</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -112,7 +125,7 @@
           <geometry>
             <mesh>
               <scale>0.01 0.01 0.01</scale>
-              <uri>model://arena_ejemplo_1/meshes/example_1.obj</uri>
+              <uri>model://arena_ejemplo_2/meshes/arena_ejemplo_2.obj</uri>
             </mesh>
           </geometry>
         </visual>
@@ -120,9 +133,9 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>9.252831 -3.649026 0.01 1.570796 0 3.141583</pose>
+      <pose frame=''>0 -10.531746 0.01 1.570796 0 1.570796</pose>
     </model>
-    <model name='male_1'>
+    <model name='female_4'>
       <link name='link'>
         <inertial>
           <pose frame=''>0 0 0.95 0 -0 0</pose>
@@ -161,7 +174,7 @@
           <pose frame=''>0 0 -0.02 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://male_1/meshes/male_1.dae</uri>
+              <uri>model://female_4/meshes/female_4.dae</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -182,7 +195,7 @@
           <pose frame=''>0 0 -0.02 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://male_1/meshes/male_1.dae</uri>
+              <uri>model://female_4/meshes/female_4.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -191,9 +204,9 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose frame=''>0.878574 -1.41429 0 0 -0 0</pose>
+      <pose frame=''>2.36819 -0.318366 0 0 -0 0</pose>
     </model>
-    <model name='male_2'>
+    <model name='Pepe'>
       <link name='link'>
         <inertial>
           <pose frame=''>0 0 0.95 0 -0 0</pose>
@@ -208,10 +221,10 @@
           </inertia>
         </inertial>
         <collision name='bottom'>
-          <pose frame=''>0 0 0.01 0 -0 0</pose>
+          <pose frame=''>0 0.1 0.5 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.35 0.75 0.02</size>
+              <size>0.5 0.35 0.02</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -232,7 +245,7 @@
           <pose frame=''>0 0 -0.02 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://male_2/meshes/male_2.dae</uri>
+              <uri>model://Pepe/meshes/Pepe.dae</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -253,7 +266,7 @@
           <pose frame=''>0 0 -0.02 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://male_2/meshes/male_2.dae</uri>
+              <uri>model://Pepe/meshes/Pepe.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -262,27 +275,27 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose frame=''>1.45722 -1.80518 0 0 -0 0</pose>
+      <pose frame=''>2.99323 -0.557406 0 0 -0 0</pose>
     </model>
-    <model name='person_walking'>
+    <model name='person_standing'>
       <link name='link'>
         <inertial>
-          <pose frame=''>0 0 0.95 0 -0 0</pose>
+          <pose frame=''>0 -0.1 0.95 0 -0 0</pose>
           <mass>80</mass>
           <inertia>
-            <ixx>27.82</ixx>
+            <ixx>24.88</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>24.88</iyy>
+            <iyy>25.73</iyy>
             <iyz>0</iyz>
-            <izz>4.57</izz>
+            <izz>2.48</izz>
           </inertia>
         </inertial>
         <collision name='bottom'>
-          <pose frame=''>0 0 0.01 0 -0 0</pose>
+          <pose frame=''>0 -0.1 0.01 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.35 0.75 0.02</size>
+              <size>0.5 0.35 0.02</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -300,10 +313,10 @@
           </surface>
         </collision>
         <collision name='person'>
-          <pose frame=''>0 0 -0.02 0 -0 0</pose>
+          <pose frame=''>0 0 0.02 0.04 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://person_walking/meshes/walking.dae</uri>
+              <uri>model://person_standing/meshes/standing.dae</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -321,10 +334,10 @@
           </surface>
         </collision>
         <visual name='visual'>
-          <pose frame=''>0 0 -0.02 0 -0 0</pose>
+          <pose frame=''>0 0 0.02 0.04 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://person_walking/meshes/walking.dae</uri>
+              <uri>model://person_standing/meshes/standing.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -332,7 +345,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>3.65928 -2.99497 0 0 -0 0</pose>
+      <pose frame=''>7.06686 2.88575 0 0 -0 0</pose>
     </model>
     <model name='female_1'>
       <link name='link'>
@@ -403,9 +416,9 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose frame=''>7.77807 0.955665 0 0 -0 0</pose>
+      <pose frame=''>2.27922 -5.9257 0 0 -0 0</pose>
     </model>
-    <model name='person_standing'>
+    <model name='person_standing_0'>
       <link name='link'>
         <inertial>
           <pose frame=''>0 -0.1 0.95 0 -0 0</pose>
@@ -473,18 +486,38 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>5.24971 1.57896 0 0 -0 0</pose>
+      <pose frame=''>3.51559 -6.51582 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>861 93000000</sim_time>
-      <real_time>1004 294075455</real_time>
-      <wall_time>1609085635 91774492</wall_time>
-      <iterations>861093</iterations>
-      <model name='female_1'>
-        <pose frame=''>7.11805 1.94631 0.69681 -1.5563 -0 -1.64898</pose>
+      <sim_time>727 486000000</sim_time>
+      <real_time>742 90136836</real_time>
+      <wall_time>1609134243 204074994</wall_time>
+      <iterations>727486</iterations>
+      <model name='Pepe'>
+        <pose frame=''>2.99323 -0.68609 0.597586 -0.279604 0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>7.11805 1.94631 0.69681 -1.5563 -0 -1.64898</pose>
+          <pose frame=''>2.99323 -0.68609 0.597586 -0.279604 0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='female_1'>
+        <pose frame=''>2.28026 -5.92622 0.587183 0 -0 1.92638</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>2.28026 -5.92622 0.587183 0 -0 1.92638</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='female_4'>
+        <pose frame=''>2.337431 -0.836201 0.576978 0 0 1.614601</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>2.337431 -0.836201 0.576978 0 0 1.614601</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -500,53 +533,36 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='male_1'>
-        <pose frame=''>0.878574 -1.35961 -0.257996 -0.176392 0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>0.878574 -1.35961 -0.257996 -0.176392 0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='male_2'>
-        <pose frame=''>1.8355 -1.80927 -0.240397 -0.110079 -0 -1.58161</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>1.8355 -1.80927 -0.240397 -0.110079 -0 -1.58161</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
       <model name='person_standing'>
-        <pose frame=''>5.25338 1.45822 1e-06 1e-06 -1e-06 3.11452</pose>
+        <pose frame=''>6.944123 2.878140 1.052139 -1.605657 0.126649 1.691327</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>5.25338 1.45822 1e-06 1e-06 -1e-06 3.11452</pose>
+          <pose frame=''>6.944123 2.878140 1.052139 -1.605657 0.126649 1.691327</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-2.29658 -1.51258 1.77764 -1.49734 -0.755534 -3.10817</acceleration>
-          <wrench>-183.726 -121.006 142.211 0 -0 0</wrench>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='person_walking'>
-        <pose frame=''>3.65928 -2.99458 -2e-06 0 9e-06 -1.57598</pose>
+      <model name='person_standing_0'>
+        <pose frame=''>3.51559 -6.51582 0.550265 0 0 -1.55699</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>3.65928 -2.99458 -2e-06 0 9e-06 -1.57598</pose>
+          <pose frame=''>3.51559 -6.51582 0.550265 0 0 -1.55699</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.01196 -1.30948 -0.241328 1.5413 -0.011966 -0.000574</acceleration>
-          <wrench>-0.956783 -104.759 -19.3062 0 -0 0</wrench>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
         <pose frame=''>0 0 10 0 -0 0</pose>
       </light>
+      <light name='user_directional_light_0'>
+        <pose frame=''>3.89202 -0.530418 1 0 -0 0</pose>
+      </light>
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-10.1837 -0.012795 3.2338 -0 0.138796 -0.107997</pose>
+        <pose frame=''>-13.157 -4.71743 5.63954 0 0.201796 0.059186</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
