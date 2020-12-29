@@ -21,7 +21,10 @@ roslaunch kobuki_gazebo arena_1.launch
 ```bash
 roslaunch kobuki_gazebo arena_2.launch
 ```
-
+### Arena 4
+```bash
+roslaunch kobuki_gazebo arena_4.launch
+```
 
 ## Controlar el robot 
 ```bash
